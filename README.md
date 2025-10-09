@@ -82,7 +82,6 @@ Numerical discretisation used in this code
 Discrete algebraic form (interior node $i$)
 
 The linear equation assembled for interior node $i$ (using $C_i$ and $K_{i\pm1/2}$ evaluated at the Picard iterate) is:
-
 $$
 \Bigl(\frac{C_i}{\Delta t} + \frac{K_{i-1/2}+K_{i+1/2}}{\Delta z^2}\Bigr) h_i^{n+1}
 - \frac{K_{i-1/2}}{\Delta z^2} h_{i-1}^{n+1}
@@ -90,7 +89,6 @@ $$
 \;=\;
 \frac{C_i}{\Delta t} h_i^{n} + \frac{K_{i-1/2}-K_{i+1/2}}{\Delta z},
 $$
-
 Boundary conditions
 -------------------
 - Dirichlet: prescribe head (enforced directly in the linear system).
