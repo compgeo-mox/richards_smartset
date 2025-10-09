@@ -27,7 +27,7 @@ where
 
 Constitutive relations (van Genuchten — Mualem)
 
-The code uses the standard van Genuchten retention curve combined with the Mualem relative permeability model. Below we present the formulae and a LaTeX-style parameter table that explains every symbol and its units/typical ranges.
+The code uses the standard van Genuchten retention curve combined with the Mualem relative permeability model. Below we present the formulae and a parameter table that explains every symbol and its units/typical ranges.
 
 Effective saturation and retention (van Genuchten):
 
