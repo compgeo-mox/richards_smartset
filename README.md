@@ -15,8 +15,9 @@ Equations and numerical scheme
 Continuous PDE (mixed form)
 
 The solver implements the 1D Richards equation in mixed form:
+
 $$
-\frac{\partial \theta(h)}{\partial t} = \frac{\partial}{\partial z}\Bigl[ K(h)\Bigl(\frac{\partial h}{\partial z} + 1\Bigr) \Bigr],
+\frac{\partial \theta(h)}{\partial t} = \frac{\partial}{\partial z}\left[ K(h)\left(\frac{\partial h}{\partial z} + 1\right) \right],
 $$
 
 where
@@ -82,13 +83,11 @@ Numerical discretisation used in this code
 Discrete algebraic form (interior node $i$)
 
 The linear equation assembled for interior node $i$ (using $C_i$ and $K_{i\pm1/2}$ evaluated at the Picard iterate) is:
+
 $$
-\Bigl(\frac{C_i}{\Delta t} + \frac{K_{i-1/2}+K_{i+1/2}}{\Delta z^2}\Bigr) h_i^{n+1}
-- \frac{K_{i-1/2}}{\Delta z^2} h_{i-1}^{n+1}
-- \frac{K_{i+1/2}}{\Delta z^2} h_{i+1}^{n+1}
-\;=\;
-\frac{C_i}{\Delta t} h_i^{n} + \frac{K_{i-1/2}-K_{i+1/2}}{\Delta z},
+\left(\frac{C_i}{\Delta t} + \frac{K_{i-1/2}+K_{i+1/2}}{\Delta z^2}\right) h_i^{n+1} - \frac{K_{i-1/2}}{\Delta z^2} h_{i-1}^{n+1} - \frac{K_{i+1/2}}{\Delta z^2} h_{i+1}^{n+1} = \frac{C_i}{\Delta t} h_i^{n} + \frac{K_{i-1/2}-K_{i+1/2}}{\Delta z},
 $$
+
 Boundary conditions
 -------------------
 - Dirichlet: prescribe head (enforced directly in the linear system).
@@ -97,10 +96,10 @@ Boundary conditions
 Notes
 -----
 - Code assumes uniform grid.
-- C(h) is computed numerically (central finite difference) for robustness; an analytical derivative can be added for speed.
+- $C(h)$ is computed numerically (central finite difference) for robustness; an analytical derivative can be added for speed.
 
 Quick start
-
+-----
 1. Create a virtual environment and install dependencies:
 
 ```bash
